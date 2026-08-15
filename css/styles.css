@@ -1,0 +1,938 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-light-blue: linear-gradient(to left, #559af3, #1462f3, #559af3);
+  --dark: #333;
+}
+
+@media (max-width: 1190px) {
+  .desc p:first-child {
+    padding-left: 0; /* Padding khatam */
+  }
+  .desc p:first-child::before {
+    display: none; /* Line gayab */
+  }
+}
+
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-arrow i {
+  font-size: 22px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-weight: 700;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 255, 0.865);
+  color: white;
+display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-arrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a,
+span {
+  display: inline-block;
+  text-decoration: none;
+}
+.container {
+  position: relative !important;
+  margin: 0px auto !important;
+}
+.number {
+  padding: 20px 45px;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(to left, #559af3, #1462f3, #559af3);
+  box-shadow: 1px 1px 8px 1px rgba(172, 168, 168, 0.459);
+}
+.nav-bg {
+  z-index: 999;
+  position: sticky;
+  top: 0px;
+  background-color: white !important;
+  padding: 25px 0px;
+  box-shadow: 0px 0px 3px 2px rgba(158, 158, 158, 0.394);
+}
+.nav-item a:hover {
+  color: blue !important;
+}
+.bg-header {
+  background-image: url("../images/h1_hero.png"); /* Image ka sahi path check karein */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 130px 0;
+}
+.desc p:first-child span {
+  width: 45px;
+  height: 2px;
+  background-color: #1462f3;
+  margin-right: 10px;
+  position: relative;
+  top: -7px;
+}
+.desc p:first-child {
+  color: blue;
+  margin-left: 10px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.desc h1 {
+  font-size: 70px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+.desc h1 span {
+  color: rgb(31, 43, 123);
+}
+.text {
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+.appoint-btn {
+  padding: 20px 45px;
+  border-radius: 10px;
+  color: white;
+  background: blue;
+  box-shadow: 1px 1px 8px 1px rgba(172, 168, 168, 0.459);
+  transition: all 2s linear;
+}
+.appoint-btn i {
+  margin-left: 15px;
+}
+.appoint-btn:hover {
+  background: var(--primary-light-blue);
+}
+/* 1. Pehle icon ko inline-block banayein aur smooth animation ke liye transition dein */
+.appoint-btn i {
+  display: inline-block; /* Yeh sab se zaroori hai, iske bagair transform nahi chalega */
+  transition: transform 0.3s ease; /* Is se icon jhatke se nahi balkay smooth move hoga */
+}
+
+/* 2. Hover karne par icon ko aage push karein */
+.appoint-btn:hover i {
+  transform: translateX(5px); /* Ab yeh bilkul sahi kaam karega */
+}
+.main-welcome {
+  margin-top: 100px;
+  display: flex;
+}
+.welcome-left-sec {
+  width: 45%;
+  /* margin-right: 60px; */
+}
+.welcome-right-desc {
+  width: 45%;
+}
+.welcome-left-sec p:first-child {
+  font-size: 20px;
+  font-weight: 400;
+  color: blue;
+  margin-bottom: 30px;
+}
+.welcome-left-sec p:first-child span {
+  width: 25px;
+  height: 1px;
+  background-color: #1462f3;
+  margin-right: 10px;
+  position: relative;
+  top: -7px;
+}
+.welcome-left-sec h3 {
+  font-weight: 800;
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+.content {
+  color: rgba(0, 0, 0, 0.596);
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+.f-doc {
+  padding: 17px 60px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(39, 129, 246);
+  box-shadow: 1px 1px 8px 1px rgba(172, 168, 168, 0.459);
+  transition: all 2s linear;
+  margin-bottom: 20px;
+}
+
+.f-doc i {
+  margin-left: 45px;
+}
+.f-doc:hover {
+  background: var(--primary-light-blue);
+}
+/* 1. Pehle icon ko inline-block banayein aur smooth animation ke liye transition dein */
+.f-doc i {
+  display: inline-block; /* Yeh sab se zaroori hai, iske bagair transform nahi chalega */
+  transition: transform 0.3s ease; /* Is se icon jhatke se nahi balkay smooth move hoga */
+}
+
+/* 2. Hover karne par icon ko aage push karein */
+.f-doc:hover i {
+  transform: translateX(5px); /* Ab yeh bilkul sahi kaam karega */
+}
+.gray-clr {
+  background-color: gray;
+}
+.gray-clr:hover {
+  background: linear-gradient(
+    to left,
+    rgb(158, 160, 175),
+    rgb(122, 124, 138),
+    rgb(158, 160, 175)
+  );
+}
+.welcome-right-desc img:first-child {
+  width: 97%;
+}
+.welcome-right-desc img:last-child {
+  position: absolute;
+  top: 150px;
+  right: 20px;
+  border: 5px solid rgba(229, 228, 228, 0.561);
+  width: 30%;
+}
+/* Mobile + MD + LG */
+@media (max-width: 1199px) {
+  .welcome-left-sec,
+  .welcome-right-desc {
+    width: 100%;
+  }
+
+  .img-hide-mobile {
+    display: none;
+  }
+
+  .img-show-mobile {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* XL + XXL */
+@media (min-width: 1200px) {
+  .img-hide-mobile,
+  .img-show-mobile {
+    display: block;
+  }
+}
+@media (max-width: 1199px) {
+  .welcome-right-desc img:nth-child(2) {
+    display: none;
+  }
+}
+.row{
+  margin-left: 0px !important;
+}
+.main-welcome {
+  margin-bottom: 150px;
+}
+.bg-departments {
+  background-color: rgba(222, 222, 251, 0.516);
+}
+.dept-desc p {
+  color: blue;
+  text-align: center;
+  padding-top: 100px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.dept-desc p span {
+  width: 50px;
+  height: 2px;
+  background-color: blue;
+  position: relative;
+  top: -5px;
+  margin-right: 6px;
+}
+.dept-desc h3 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
+.departs {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.dept {
+  width: 160px;
+  height: 160px;
+  border-radius: 5px;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.527);
+}
+.dept i {
+  font-size: 50px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+  margin-bottom: 15px;
+}
+.dept p {
+  font-size: 18px;
+  color: rgba(17, 17, 17, 0.71);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.departs .active {
+  background-color: blue !important;
+}
+.departs .active i,
+.departs .active p {
+  color: white;
+}
+@media (max-width: 500px) {
+  .departs {
+  gap: 15px;
+  
+  }
+}
+
+.dentist-surgery {
+  display: flex;
+  padding-bottom: 150px;
+}
+.left-side-dentist {
+  padding: 100px 100px 100px 80px;
+  background-color: rgba(21, 21, 249, 0.598);
+}
+.left-side-dentist h3 {
+  color: rgba(255, 255, 255, 0.918);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.left-side-dentist p {
+  color: rgba(255, 255, 255, 0.912);
+  font-size: 15px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+.appoint-btn-dep {
+  padding: 20px 24px;
+  background-color: white;
+  color: black;
+  box-shadow: 1px 1px 8px 1px rgba(172, 168, 168, 0.459);
+  transition: all 2s linear;
+}
+.appoint-btn-dep i {
+  margin-left: 25px;
+}
+
+/* XL and XXL */
+@media (max-width: 1200px) {
+  .dentist-surgery img {
+    z-index: 1;
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+.gellary-desc p {
+  color: blue;
+  text-align: center;
+  padding-top: 100px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.gellary-desc p span {
+  width: 50px;
+  height: 2px;
+  background-color: blue;
+  position: relative;
+  top: -5px;
+  margin-right: 6px;
+}
+.gellary-desc h3 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
+@media (max-width: 500px) {
+  .left-side-dentist  .appoint-btn-dep{
+    padding: 15px 20px;
+  
+  }
+  .appoint-btn-dep i{
+    margin-left: 10px;
+  }
+}.testimonial-section{
+    margin:100px 0;
+}
+
+.left-bg{
+    background:url("../images/section_bg01.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:700px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.bg-right{
+    background:url("../images/startup.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:700px;
+}
+
+.testimonial-content{
+    text-align:center;
+    max-width:600px;
+    margin:auto;
+}
+
+.testimonial-content p{
+    color:#fff;
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:40px;
+}
+
+.profile-1{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+}
+
+.profile-1 img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+}
+
+.profile-1-desc h3{
+    color:#fff;
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.profile-1-desc p{
+    color:#ddd;
+    margin:0;
+}
+
+/* Mobile */
+@media (max-width:991.98px){
+
+    .bg-right{
+        display:none;
+    }
+
+    .left-bg{
+        min-height:auto;
+        padding:100px 20px;
+    }
+
+    .testimonial-content p{
+        font-size:18px;
+    }
+
+    .profile-1{
+        flex-direction:column;
+    }
+}
+/* ==========================
+   OUR SPECIALIST
+========================== */
+
+.specialist-desc {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.specialist-desc p:first-child span {
+  width: 45px;
+  height: 2px;
+  background-color: #1462f3;
+  margin-right: 10px;
+  position: relative;
+  top: -7px;
+}
+
+.specialist-desc p:first-child {
+  text-align: center;
+  margin-top: 150px;
+  color: #1462f3;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.specialist-desc h3 {
+  font-size: 48px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.807);
+  margin-bottom: 30px;
+}
+
+/* ==========================
+   Doctor Card
+========================== */
+
+.specialist-card {
+  background: #fff;
+  border: 1px solid #eef2ff;
+  transition: 0.4s;
+}
+
+.specialist-img img {
+  width: 100%;
+  transition: 0.4s;
+  display: block;
+}
+.specialist-img img:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px);
+}
+
+.specialist-content {
+  padding: 25px;
+}
+
+.specialist-content h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2b7b;
+  margin-bottom: 10px;
+}
+
+.specialist-content p {
+  font-size: 16px;
+  color: #8d8d8d;
+  margin-bottom: 25px;
+}
+.specialist-img {
+  overflow: hidden;
+}
+
+.specialist-img img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.specialist-card:hover .specialist-img img {
+  transform: scale(1.1);
+}
+.specialist-content:hover {
+  background-color: blue;
+}
+.specialist-content:hover h4,
+.specialist-content:hover p,
+.specialist-content:hover i {
+  transition: all 0.3s linear;
+  color: white;
+}
+
+.specialist-content:hover i {
+  border: 1px solid white;
+}
+.specialist-social {
+  display: flex;
+  gap: 12px;
+}
+
+.specialist-social a {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1462f3;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.specialist-social a:hover {
+  background: #1462f3;
+  color: #fff;
+}/* ==========================
+   Specialist Responsive
+========================== */
+
+@media (max-width: 1199.98px) {
+  .specialist-card {
+    max-width: 420px;
+    margin: 0 auto 30px;
+  }
+
+  .specialist-desc h3 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .specialist-desc h3 {
+    font-size: 32px;
+  }
+
+  .specialist-content {
+    padding: 20px;
+  }
+}
+
+/* ==========================
+   Specialist Icons
+========================== */
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icons i {
+  padding: 4px 7px;
+  border: 1px solid rgba(188, 187, 187, 0.47);
+  border-radius: 50%;
+  color: rgba(146, 145, 145, 0.78);
+}
+
+.bg-specialist {
+  margin-bottom: 150px;
+}
+
+/* ==========================
+   Appointment
+========================== */
+
+#appointment-form {
+  padding: 100px 0;
+  display: flex;
+}
+
+.left-appoint img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.right-appoint-desc {
+  background: #f8fcff;
+  height: 100%;
+  padding: 111px 51px 100px 67px;
+  /* margin-right: 60px; */
+}
+
+.right-appoint-desc p:first-child {
+  color: #1462f3;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 0 0 30px 10px;
+}
+
+.right-appoint-desc p:first-child span {
+  display: inline-block;
+  width: 45px;
+  height: 2px;
+  background: #1462f3;
+  margin-right: 10px;
+  position: relative;
+  top: -7px;
+}
+
+.right-appoint-desc h3 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #001858;
+  margin-bottom: 30px;
+}
+
+.right-appoint-desc .form-control,
+.right-appoint-desc .form-select {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  background: transparent;
+  padding-left: 0;
+  box-shadow: none;
+}
+
+.right-appoint-desc .form-control:focus,
+.right-appoint-desc .form-select:focus,
+.custom-select select:focus {
+  border-bottom: 1px solid #1462f3;
+  box-shadow: none;
+}
+
+.right-appoint-desc textarea {
+  resize: none;
+}
+
+/* Custom Select */
+
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select select {
+  width: 100%;
+  padding: 12px 35px 12px 0;
+  font-size: 16px;
+  color: #1f2b7b;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.custom-select::after {
+  content: "\ea4e";
+  font-family: "remixicon";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none;
+}
+
+.custom-select select option {
+  background: #fff;
+  color: #888;
+}
+
+/* ==========================
+   Blog
+========================== */
+
+#blog {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.blog-desc {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.blog-desc p {
+  color: #1462f3;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.blog-desc p span {
+  width: 45px;
+  height: 2px;
+  background: #1462f3;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: -4px;
+}
+
+.blog-desc h3 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0b1742;
+}
+
+.blog-main {
+  row-gap: 30px;
+}
+
+.blog-card {
+  background: #fff;
+  overflow: hidden;
+  transition: .4s;
+}
+
+.blog-card img {
+  width: 100%;
+  display: block;
+  transition: .5s;
+}
+
+.blog-card:hover img {
+  transform: translateY(-8px);
+}
+
+.blog-card:hover img {
+  transform: scale(1.08);
+}
+
+.blog-content {
+  padding: 25px;
+  background-color: rgba(226, 226, 246, 0.375);
+}
+
+.blog-info {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 18px;
+}
+
+.blog-info span:first-child {
+  color: #1462f3;
+}
+
+.blog-content h4 {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  color: #0b1742;
+  transition: .3s;
+}
+
+.blog-card:hover a {
+  color: #1462f3;
+}
+
+.blog-content a {
+  color: #999;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.blog-content a i {
+  margin-left: 5px;
+}
+
+/* ==========================
+   Footer
+========================== */
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  background: #10131c;
+  padding-bottom: 60px;
+}
+
+footer h3,
+footer h5 {
+  color: #fff;
+}
+
+footer p {
+  font-size: 15px;
+  color: #4c5f725d;
+  line-height: 1.9;
+}
+.blue-num{
+  color: blue;
+}
+
+footer form .form-control {
+  height: 50px;
+  background: #1a2230;
+  color: #fff;
+}
+
+footer form .form-control::placeholder {
+  color: #9aa4b8;
+}
+
+footer form .form-control:focus {
+  background: #1a2230;
+  color: #fff;
+  box-shadow: none;
+}
+
+footer .btn {
+  height: 50px;
+}
+
+.footer-icons a,
+footer a {
+  font-size: 20px;
+  transition: .3s;
+}
+
+.footer-icons a:hover,
+footer a:hover {
+  transform: rotateY(180deg);
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 1199.98px) {
+  .left-appoint,
+  .right-appoint-desc {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .left-appoint img {
+    height: auto;
+  }
+
+  .right-appoint-desc {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .left-appoint,
+  .right-appoint-desc {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+.appoint-btn-submit {
+  padding: 20px 45px;
+  border-radius: 10px;
+  color: white;
+  background: blue;
+ outline: none;
+ border: none;
+  transition: all 2s linear;
+}
+.img-position{
+     position: absolute;
+    top: 293px;
+    width: 48%;
+}
